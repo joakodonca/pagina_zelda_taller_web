@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de contacto</title>
+</head>
+
+<body style="text-align: center;">
+    
+    <header>
+        <table style="width: 80%; text-align: center; border-collapse: collapse; margin: 20px 150px; border: 2px solid black;">
+            <tr>
+                <!-- Logo del sitio -->
+                <td style="width: 50px; text-align: left;">
+                    <img src="imagenes-zelda/logo-pequeño.png" alt="logozelda" style="width: 50px;">
+                </td>
+                <!-- Menú de navegación entre páginas -->
+                <td style="text-align: right;">
+                    <nav>
+                        <button style="border: 2px solid black; padding: 5px 15px; ">
+                            <a href="index.html" style="text-decoration: none; color: black;">
+                                Inicio
+                            </a>
+                        </button>
+
+                        <button style="border: 2px solid black; padding: 5px 15px;">
+                            <a href="login.html" style="text-decoration: none; color: black;">
+                                Login
+                            </a>
+                        </button>
+
+                        <button style="border: 2px solid black; padding: 5px 15px; margin-right:10px;background-color: rgb(0, 255, 123);">
+                            <a href="contacto.html" style="text-decoration: none; color: black;">
+                                Contacto
+                            </a>
+                        </button>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </header>
+  
+    <section>
+        <table style="width: 80%; text-align: center; border-collapse: collapse; margin: 20px 150px; border: 2px solid black;">
+            <tr>
+                <td style="text-align: center; padding: 0;">
+                    <img src="imagenes-zelda/imagen1-zelda.png" alt="Imagen1Zelda" style="width: 100%; object-fit: cover; height: 250px; display: block;">
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <form action="#" method="POST">
+        <table style="width: 80%;margin: 20px 150px;text-align: left;">
+            <tr>
+                <td style="padding: 15px; width: 15%; font-weight: bold;">
+                    Nombres:
+                </td>
+                <td style="padding: 15px; width: 42%;">
+                    <input type="text" name="primer_nombre" placeholder="Primer Nombre" style="width: 100%; padding: 8px; box-sizing: border-box; border: 2px solid black;">
+                </td>
+                <td style="padding: 15px; width: 43%;">
+                    <input type="text" name="segundo_nombre" placeholder="Segundo Nombre" style="width: 100%; padding: 8px; box-sizing: border-box; border: 2px solid black;">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 15px; font-weight: bold;">
+                    Email:
+                </td>
+                <td colspan="2" style="padding: 15px;">
+                    <input type="email" name="email" placeholder="Eje: nombre@gmail.com" style="width: 100%; padding: 8px; box-sizing: border-box; border: 2px solid black;">
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 15px; font-weight: bold;">
+                    Telefono:
+                </td>
+                <td colspan="2" style="padding: 15px;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <td style="width: 19%; padding-right: 10px; padding: 0;">
+                                <input type="text" name="prefijo" value="+569" style="width: 100%; padding: 8px; box-sizing: border-box; text-align: left; border: 2px solid black;">
+                            </td>
+                            <td style="width: 1%; padding: 0;">
+                            </td>
+                            <td style="width: 79%; padding: 0;">
+                                <input type="tel" name="telefono" placeholder="12345678" style="width: 100%; padding: 8px; box-sizing: border-box; border: 2px solid black;">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 15px; font-weight: bold;">
+                    Asunto:
+                </td>
+                <td colspan="2" style="padding: 15px;">
+                    <select name="asunto" style="width: 100%; padding: 8px; box-sizing: border-box;background-color: white;border: 2px solid black;">
+                        <option value="otro">Otro</option>
+                        <option value="soporte">Soporte</option>
+                        <option value="consulta">Consulta</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 15px; font-weight: bold; vertical-align: top; ">
+                    Mensaje:
+                </td>
+                <td colspan="2" style="padding: 15px;">
+                    <textarea name="mensaje" rows="6" style="width: 100%; padding: 8px; box-sizing: border-box; resize: vertical;border: 2px solid black;" placeholder="Escribe tu mensaje..."></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 15px; font-weight: bold; vertical-align: top;">
+                    Sexo:
+                </td>
+
+                <td colspan="2" style="padding: 15px;">
+                    <input id ="masculino" type="radio" name="sexo" value="masculino" style="margin-right: 5px;">
+                    <label for="masculino" style="margin-right: 15px;">Masculino</label>
+                    <br>
+                    <input id ="femenino" type="radio" name="sexo" value="femenino" style="margin-right: 5px;">
+                    <label for="femenino" style="margin-right: 15px;">Femenino</label>
+                    <br>
+                    <input id = "otros" type="radio" name="sexo" value="otros" style="margin-right: 5px;">
+                    <label for="otros" style="margin-right: 15px;">Otros</label>
+                    <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 15px; font-weight: bold; vertical-align: top;">
+                    Areas de interes:
+                </td>
+
+                <td style="padding: 15px;">
+                    <input id ="compra" type="checkbox" name="interes" value="compra" style="margin-right: 20px;">
+                    <label for="compra" style="margin-right: 15px;">Compra</label>
+                    <br>
+                    <input id ="reseña" type="checkbox" name="interes" value="reseña" style="margin-right: 20px;">
+                    <label for="reseña" style="margin-right: 15px;">Reseña</label>
+                    <br>
+                    <input id = "gameplays" type="checkbox" name="interes" value="gameplays" style="margin-right: 20px;">
+                    <label for="gameplays" style="margin-right: 15px;">Gameplays</label>
+                    <br>
+                    <input id = "videos" type="checkbox" name="interes" value="videos" style="margin-right: 20px;">
+                    <label for="videos" style="margin-right: 15px;">Videos</label>
+                    <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 15px; font-weight: bold; vertical-align: top;">
+                    Fecha de nacimiento:
+                </td>
+
+                <td style="padding: 15px;">
+                    <input id="fecha" type="date" name="fecha" style="margin-right: 20px;">
+                </td>
+            </tr>
+            <br></br>
+            <tr>
+                <td style="padding: 15px; font-weight: bold; vertical-align: top;">
+                    Color:
+                </td>
+
+                <td style="padding: 15px;">
+                    <input id="color" type="color" name="color" style="margin-right: 20px;">
+                </td>
+            </tr>
+            <br></br>
+            <tr>
+                <td style="padding: 15px; font-weight: bold; vertical-align: top;">
+                    Archivo:
+                </td>
+
+                <td style="padding: 15px;">
+                    <input id="file" type="file" name="file" style="margin-right: 20px;">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding: 15px; text-align: right;">
+                    <button type="submit" style="padding: 8px 30px;background-color: rgb(0, 255, 123);border: 2px solid black; cursor: pointer;">
+                        Enviar
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <aside>
+        <table style="width: 80%; text-align: center; border-collapse: collapse; margin: 20px 150px; border: 2px solid black;">
+            <tr>
+                <td style="text-align: center;width: 33%; padding-bottom: 20px;">
+                    <h3>Sitios web de compra</h3>
+                    <a href="https://www.nintendo.com/es-cl/store/products/the-legend-of-zelda-breath-of-the-wild-switch/?srsltid=AU7gw4V14s-6I4wF00ZSldGZVlxAf1OIQEkdbyFGH-yXofG9So1y1Ynr" target="_blank">Nintendo eShop</a></br>
+                    <a href="https://www.falabella.com/falabella-cl/product/152741220/legend-of-zelda-breath-of-the-wild-n-switch-2/152741222" target="_blank">Falabella</a></br>
+                    <a href="https://www.mercadolibre.cl/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2/p/MLC49831420?matt_tool=16931662&utm_source=google_shopping&utm_medium=organic&pdp_filters=item_id%3AMLC1624244183&from=gshop">Mercado Libre</a></br>
+                </td>
+                <td style="text-align: center;width: 33%; padding-bottom: 20px;">
+                    <h3>Sitios web de reseñas</h3>
+                    <a href="https://vandal.elespanol.com/analisis/switch/the-legend-of-zelda-breath-of-the-wild/43030#p-83" target="_blank">Vandal</a></br>
+                    <a href="https://www.3djuegos.com/juegos/the-legend-of-zelda-breath-of-the-wild/analisis/es-leyenda-170302-7920" target="_blank">3D Juegos</a></br>
+                    <a href="https://www.ign.com/articles/2017/03/02/the-legend-of-zelda-breath-of-the-wild-review" target="_blank">IGN</a></br>
+                </td>
+                <td style="text-align: center;width: 33%;">
+                    <a href="https://www.facebook.com/LegendofZelda">
+                            <img src="imagenes-zelda/fb.avif" alt="Facebook" style="width: 40px;"></a></br>
+                        <a href="https://whatsapp.com/channel/0029VaTkyaQLY6d8rj26pM0A"> 
+                            <img src="imagenes-zelda/wsp.avif" alt="Whatsapp" style="width: 45px;"></a></br>
+                        <a href="https://www.instagram.com/nintendoamerica/">
+                            <img src="imagenes-zelda/ig.avif" alt="Instagram" style="width: 40px;"></a>
+                </td>    
+            </tr>
+        </table>
+    </aside>
+
+    <footer>
+        <table style="width: 80%; text-align: center; border-collapse: collapse; margin: 20px 150px; border: 2px solid black;">
+            <tr>
+                <td>
+                    <h3> &copy; Joaquin Donoso Campusano 2026</h3>
+                </td>
+            </tr>
+        </table>
+          
+    </footer>
+</body>
+</html>
