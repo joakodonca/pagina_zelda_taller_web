@@ -4,41 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de contacto</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
-<body style="text-align: center;">
-    
+<body>
     <header>
-        <table style="width: 80%; text-align: center; border-collapse: collapse; margin: 20px 150px; border: 2px solid black;">
-            <tr>
-                <!-- Logo del sitio -->
-                <td style="width: 50px; text-align: left;">
-                    <img src="imagenes-zelda/logo-pequeño.png" alt="logozelda" style="width: 50px;">
-                </td>
-                <!-- Menú de navegación entre páginas -->
-                <td style="text-align: right;">
-                    <nav>
-                        <button style="border: 2px solid black; padding: 5px 15px; ">
-                            <a href="index.html" style="text-decoration: none; color: black;">
-                                Inicio
-                            </a>
-                        </button>
-
-                        <button style="border: 2px solid black; padding: 5px 15px;">
-                            <a href="login.html" style="text-decoration: none; color: black;">
-                                Login
-                            </a>
-                        </button>
-
-                        <button style="border: 2px solid black; padding: 5px 15px; margin-right:10px;background-color: rgb(0, 255, 123);">
-                            <a href="contacto.html" style="text-decoration: none; color: black;">
-                                Contacto
-                            </a>
-                        </button>
-                    </nav>
-                </td>
-            </tr>
-        </table>
+        <img src="imagenes-zelda/logo-pequeño.png" alt="logozelda" class="logo">
+         <nav>
+            <button class="boton_nav">
+                <a href="index.html">
+                Inicio
+                </a>
+            </button>
+            <button class="boton_nav">
+                <a href="login.html">
+                Inicio de sesión
+                </a>
+            </button>
+            <button class="boton_nav boton_nav_activo">
+                <a href="contacto.html">
+                    Contacto
+                </a>
+            </button>
+        </nav>
     </header>
   
     <section>
