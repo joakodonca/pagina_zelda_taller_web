@@ -11,32 +11,16 @@
     <header>
         <img src="imagenes-zelda/logo-pequeño.png" alt="logozelda" class="logo">
          <nav>
-            <button class="boton_nav">
-                <a href="index.html">
-                Inicio
-                </a>
-            </button>
-            <button class="boton_nav boton_nav_activo">
-                <a href="login.html">
-                Inicio de sesión
-                </a>
-            </button>
-            <button class="boton_nav">
-                <a href="contacto.html">
-                    Contacto
-                </a>
-            </button>
+            <a class="boton_nav" href="index.html">Inicio</a>
+            <a class="boton_nav boton_nav_activo" href="login.html">Inicio de sesión</a>
+            <a class="boton_nav" href="contacto.html">Contacto</a>
         </nav>
     </header>
     <!-- Banner principal con la imagen destacada de Zelda -->
     <section>
-        <table style="width: 80%; text-align: center; border-collapse: collapse; margin: 20px 150px; border: 2px solid black;">
-            <tr>
-                <td style="text-align: center; padding: 0;">
-                    <img src="imagenes-zelda/imagen1-zelda.png" alt="Imagen1Zelda" style="width: 100%; object-fit: cover; height: 250px; display: block;">
-                </td>
-            </tr>
-        </table>
+        <div class="banner_principal">
+            <img src="imagenes-zelda/imagen1-zelda.png" alt="Imagen1Zelda" class="banner_imagen">
+        </div>
     </section>
     <!-- Contenido principal: video, imagen y descripción del juego -->
     <section>
@@ -94,51 +78,48 @@
         </table>
     </section>
     <!-- Banner principal con la imagen destacada de Zelda -->
-    <section> 
-        <table style="width: 80%; text-align: center; border-collapse: collapse; margin: 20px 150px; border: 2px solid black;">
-            <tr>
-                <td style="text-align: center; padding: 0;">
-                    <img src="imagenes-zelda/imagen3-zelda.png" alt="Imagen3Zelda" style="width: 100%; object-fit: cover; height: 250px; display: block;">
-                </td>
-            </tr>
-        </table>
+    <section>
+        <div class="banner_principal">
+            <img src="imagenes-zelda/imagen3-zelda.png" alt="Imagen3Zelda" class="banner_imagen">
+        </div>
     </section>
 
-    <aside>
-        <table style="width: 80%; text-align: center; border-collapse: collapse; margin: 20px 150px; border: 2px solid black;">
-            <tr>
-                <td style="text-align: center;width: 33%; padding-bottom: 20px;">
-                    <h3>Sitios web de compra</h3>
-                    <a href="https://www.nintendo.com/es-cl/store/products/the-legend-of-zelda-breath-of-the-wild-switch/?srsltid=AU7gw4V14s-6I4wF00ZSldGZVlxAf1OIQEkdbyFGH-yXofG9So1y1Ynr" target="_blank">Nintendo eShop</a></br>
-                    <a href="https://www.falabella.com/falabella-cl/product/152741220/legend-of-zelda-breath-of-the-wild-n-switch-2/152741222" target="_blank">Falabella</a></br>
-                    <a href="https://www.mercadolibre.cl/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2/p/MLC49831420?matt_tool=16931662&utm_source=google_shopping&utm_medium=organic&pdp_filters=item_id%3AMLC1624244183&from=gshop">Mercado Libre</a></br>
-                </td>
-                <td style="text-align: center;width: 33%; padding-bottom: 20px;">
-                    <h3>Sitios web de reseñas</h3>
-                    <a href="https://vandal.elespanol.com/analisis/switch/the-legend-of-zelda-breath-of-the-wild/43030#p-83" target="_blank">Vandal</a></br>
-                    <a href="https://www.3djuegos.com/juegos/the-legend-of-zelda-breath-of-the-wild/analisis/es-leyenda-170302-7920" target="_blank">3D Juegos</a></br>
-                    <a href="https://www.ign.com/articles/2017/03/02/the-legend-of-zelda-breath-of-the-wild-review" target="_blank">IGN</a></br>
-                </td>
-                <td style="text-align: center;width: 33%;">
-                    <a href="https://www.facebook.com/LegendofZelda">
-                            <img src="imagenes-zelda/fb.avif" alt="Facebook" style="width: 40px;"></a></br>
-                        <a href="https://whatsapp.com/channel/0029VaTkyaQLY6d8rj26pM0A"> 
-                            <img src="imagenes-zelda/wsp.avif" alt="Whatsapp" style="width: 45px;"></a></br>
-                        <a href="https://www.instagram.com/nintendoamerica/">
-                            <img src="imagenes-zelda/ig.avif" alt="Instagram" style="width: 40px;"></a>
-                </td>    
-            </tr>
-        </table>
+    <aside class="sitios_info">
+        <section class="grupo_info">
+            <h3>Sitios web de compra</h3>
+            <div class="lista_info">
+                <a href="https://www.nintendo.com/es-cl/store/products/the-legend-of-zelda-breath-of-the-wild-switch/?srsltid=AU7gw4V14s-6I4wF00ZSldGZVlxAf1OIQEkdbyFGH-yXofG9So1y1Ynr" target="_blank" rel="noopener noreferrer">Nintendo eShop</a>
+                <a href="https://www.falabella.com/falabella-cl/product/152741220/legend-of-zelda-breath-of-the-wild-n-switch-2/152741222" target="_blank" rel="noopener noreferrer">Falabella</a>
+                <a href="https://www.mercadolibre.cl/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2/p/MLC49831420?matt_tool=16931662&amp;utm_source=google_shopping&amp;utm_medium=organic&amp;pdp_filters=item_id%3AMLC1624244183&amp;from=gshop">Mercado Libre</a>
+            </div>
+        </section>
+        
+        <section class="grupo_info">
+            <h3>Sitios web de reseñas</h3>
+            <div class="lista_info">
+                <a href="https://vandal.elespanol.com/analisis/switch/the-legend-of-zelda-breath-of-the-wild/43030#p-83" target="_blank" rel="noopener noreferrer">Vandal</a>
+                <a href="https://www.3djuegos.com/juegos/the-legend-of-zelda-breath-of-the-wild/analisis/es-leyenda-170302-7920" target="_blank" rel="noopener noreferrer">3D Juegos</a>
+                <a href="https://www.ign.com/articles/2017/03/02/the-legend-of-zelda-breath-of-the-wild-review" target="_blank" rel="noopener noreferrer">IGN</a>
+            </div>
+        </section>
+
+        <section class="grupo_info grupo_redes" aria-label="Redes sociales">
+            <a href="https://www.facebook.com/LegendofZelda">
+                <img src="imagenes-zelda/fb.avif" alt="Facebook">
+            </a>
+            <a href="https://whatsapp.com/channel/0029VaTkyaQLY6d8rj26pM0A">
+                <img src="imagenes-zelda/wsp.avif" alt="WhatsApp">
+            </a>
+            <a href="https://www.instagram.com/nintendoamerica/">
+                <img src="imagenes-zelda/ig.avif" alt="Instagram">
+            </a>
+        </section>
     </aside>
 
     <footer>
-        <table style="width: 80%; text-align: center; border-collapse: collapse; margin: 20px 150px; border: 2px solid black;">
-            <tr>
-                <td>
-                    <h3> &copy; Joaquin Donoso Campusano 2026</h3>
-                </td>
-            </tr>
-        </table>
+        <div class="pie_pagina">
+            <h3>&copy; Joaquin Donoso Campusano 2026</h3>
+        </div>
     </footer>
 </body>
 </html>
