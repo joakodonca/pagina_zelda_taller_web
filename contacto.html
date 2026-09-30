@@ -23,145 +23,79 @@
         </div>
     </section>
 
-    <form action="#" method="POST">
-        <table style="width: 80%;margin: 20px 150px;text-align: left;">
-            <tr>
-                <td style="padding: 15px; width: 15%; font-weight: bold;">
-                    Nombres:
-                </td>
-                <td style="padding: 15px; width: 42%;">
-                    <input type="text" name="primer_nombre" placeholder="Primer Nombre" style="width: 100%; padding: 8px; box-sizing: border-box; border: 2px solid black;">
-                </td>
-                <td style="padding: 15px; width: 43%;">
-                    <input type="text" name="segundo_nombre" placeholder="Segundo Nombre" style="width: 100%; padding: 8px; box-sizing: border-box; border: 2px solid black;">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding: 15px; font-weight: bold;">
-                    Email:
-                </td>
-                <td colspan="2" style="padding: 15px;">
-                    <input type="email" name="email" placeholder="Eje: nombre@gmail.com" style="width: 100%; padding: 8px; box-sizing: border-box; border: 2px solid black;">
-                </td>
-            </tr>
+    <form class="form_contacto" action="#" method="POST">
+        <div class="fila_form">
+            <label class="etiqueta_form" for="primer_nombre">Nombres:</label>
+            <div class="campos_nombres">
+                <input id="primer_nombre" type="text" name="primer_nombre" placeholder="Primer Nombre">
+                <input id="segundo_nombre" type="text" name="segundo_nombre" placeholder="Segundo Nombre" aria-label="Segundo nombre">
+            </div>
+        </div>
 
-            <tr>
-                <td style="padding: 15px; font-weight: bold;">
-                    Telefono:
-                </td>
-                <td colspan="2" style="padding: 15px;">
-                    <table style="width: 100%; border-collapse: collapse;">
-                        <tr>
-                            <td style="width: 19%; padding-right: 10px; padding: 0;">
-                                <input type="text" name="prefijo" value="+569" style="width: 100%; padding: 8px; box-sizing: border-box; text-align: left; border: 2px solid black;">
-                            </td>
-                            <td style="width: 1%; padding: 0;">
-                            </td>
-                            <td style="width: 79%; padding: 0;">
-                                <input type="tel" name="telefono" placeholder="12345678" style="width: 100%; padding: 8px; box-sizing: border-box; border: 2px solid black;">
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
+        <div class="fila_form">
+            <label class="etiqueta_form" for="email">Email:</label>
+            <input id="email" type="email" name="email" placeholder="Eje: nombre@gmail.com">
+        </div>
 
-            <tr>
-                <td style="padding: 15px; font-weight: bold;">
-                    Asunto:
-                </td>
-                <td colspan="2" style="padding: 15px;">
-                    <select name="asunto" style="width: 100%; padding: 8px; box-sizing: border-box;background-color: white;border: 2px solid black;">
-                        <option value="otro">Otro</option>
-                        <option value="soporte">Soporte</option>
-                        <option value="consulta">Consulta</option>
-                    </select>
-                </td>
-            </tr>
+        <div class="fila_form">
+            <label class="etiqueta_form" for="telefono">Teléfono:</label>
+            <div class="campos_telefono">
+                <input id="prefijo" type="text" name="prefijo" value="+569" aria-label="Prefijo telefónico">
+                <input id="telefono" type="tel" name="telefono" placeholder="12345678">
+            </div>
+        </div>
 
-            <tr>
-                <td style="padding: 15px; font-weight: bold; vertical-align: top; ">
-                    Mensaje:
-                </td>
-                <td colspan="2" style="padding: 15px;">
-                    <textarea name="mensaje" rows="6" style="width: 100%; padding: 8px; box-sizing: border-box; resize: vertical;border: 2px solid black;" placeholder="Escribe tu mensaje..."></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding: 15px; font-weight: bold; vertical-align: top;">
-                    Sexo:
-                </td>
+        <div class="fila_form">
+            <label class="etiqueta_form" for="asunto">Asunto:</label>
+            <select id="asunto" name="asunto">
+                <option value="otro">Otro</option>
+                <option value="soporte">Soporte</option>
+                <option value="consulta">Consulta</option>
+            </select>
+        </div>
 
-                <td colspan="2" style="padding: 15px;">
-                    <input id ="masculino" type="radio" name="sexo" value="masculino" style="margin-right: 5px;">
-                    <label for="masculino" style="margin-right: 15px;">Masculino</label>
-                    <br>
-                    <input id ="femenino" type="radio" name="sexo" value="femenino" style="margin-right: 5px;">
-                    <label for="femenino" style="margin-right: 15px;">Femenino</label>
-                    <br>
-                    <input id = "otros" type="radio" name="sexo" value="otros" style="margin-right: 5px;">
-                    <label for="otros" style="margin-right: 15px;">Otros</label>
-                    <br>
-                </td>
-            </tr>
+        <div class="fila_form">
+            <label class="etiqueta_form" for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje..."></textarea>
+        </div>
 
-            <tr>
-                <td style="padding: 15px; font-weight: bold; vertical-align: top;">
-                    Areas de interes:
-                </td>
+        <div class="fila_form">
+            <span class="etiqueta_form" id="etiqueta_sexo">Sexo:</span>
+            <div class="opciones_form" role="group" aria-labelledby="etiqueta_sexo">
+                <label><input id="masculino" type="radio" name="sexo" value="masculino">Masculino</label>
+                <label><input id="femenino" type="radio" name="sexo" value="femenino">Femenino</label>
+                <label><input id="otros" type="radio" name="sexo" value="otros">Otros</label>
+            </div>
+        </div>
 
-                <td style="padding: 15px;">
-                    <input id ="compra" type="checkbox" name="interes" value="compra" style="margin-right: 20px;">
-                    <label for="compra" style="margin-right: 15px;">Compra</label>
-                    <br>
-                    <input id ="reseña" type="checkbox" name="interes" value="reseña" style="margin-right: 20px;">
-                    <label for="reseña" style="margin-right: 15px;">Reseña</label>
-                    <br>
-                    <input id = "gameplays" type="checkbox" name="interes" value="gameplays" style="margin-right: 20px;">
-                    <label for="gameplays" style="margin-right: 15px;">Gameplays</label>
-                    <br>
-                    <input id = "videos" type="checkbox" name="interes" value="videos" style="margin-right: 20px;">
-                    <label for="videos" style="margin-right: 15px;">Videos</label>
-                    <br>
-                </td>
-            </tr>
+        <div class="fila_form">
+            <span class="etiqueta_form" id="etiqueta_intereses">Áreas de interés:</span>
+            <div class="opciones_form" role="group" aria-labelledby="etiqueta_intereses">
+                <label><input id="compra" type="checkbox" name="interes" value="compra">Compra</label>
+                <label><input id="resena" type="checkbox" name="interes" value="reseña">Reseña</label>
+                <label><input id="gameplays" type="checkbox" name="interes" value="gameplays">Gameplays</label>
+                <label><input id="videos" type="checkbox" name="interes" value="videos">Videos</label>
+            </div>
+        </div>
 
-            <tr>
-                <td style="padding: 15px; font-weight: bold; vertical-align: top;">
-                    Fecha de nacimiento:
-                </td>
+        <div class="fila_form">
+            <label class="etiqueta_form" for="fecha">Fecha de nacimiento:</label>
+            <input id="fecha" type="date" name="fecha">
+        </div>
 
-                <td style="padding: 15px;">
-                    <input id="fecha" type="date" name="fecha" style="margin-right: 20px;">
-                </td>
-            </tr>
-            <br></br>
-            <tr>
-                <td style="padding: 15px; font-weight: bold; vertical-align: top;">
-                    Color:
-                </td>
+        <div class="fila_form">
+            <label class="etiqueta_form" for="color">Color:</label>
+            <input id="color" type="color" name="color">
+        </div>
 
-                <td style="padding: 15px;">
-                    <input id="color" type="color" name="color" style="margin-right: 20px;">
-                </td>
-            </tr>
-            <br></br>
-            <tr>
-                <td style="padding: 15px; font-weight: bold; vertical-align: top;">
-                    Archivo:
-                </td>
+        <div class="fila_form">
+            <label class="etiqueta_form" for="file">Archivo:</label>
+            <input id="file" type="file" name="file">
+        </div>
 
-                <td style="padding: 15px;">
-                    <input id="file" type="file" name="file" style="margin-right: 20px;">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3" style="padding: 15px; text-align: right;">
-                    <button type="submit" style="padding: 8px 30px;background-color: rgb(0, 255, 123);border: 2px solid black; cursor: pointer;">
-                        Enviar
-                    </button>
-                </td>
-            </tr>
-        </table>
+        <div class="boton_form">
+            <button type="submit">Enviar</button>
+        </div>
     </form>
 
     <aside class="sitios_info">
