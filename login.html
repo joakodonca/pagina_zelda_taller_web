@@ -22,60 +22,48 @@
             <img src="imagenes-zelda/imagen1-zelda.png" alt="Imagen1Zelda" class="banner_imagen">
         </div>
     </section>
-    <!-- Contenido principal: video, imagen y descripción del juego -->
-    <section>
-        <table style="width: 80%; text-align: center; border:none;margin: 20px 150px;">
-            <tr>
-                <td style="width: 38%; vertical-align: top; padding: 0; border: none;">
-                    <h2>Iniciar Sesión</h2>
-                    <p>Ingrese sus credenciales</p>
-                </td>
-            </tr>
-            <form action="#" method="POST">
-                <tr>
-                    <td colspan = "2"style="width: 80%; text-align: left; padding: 0;">
-                        <label for="email" style="margin-left:350px;">Email:</label>
-                        <input type="email" id="email" name="email" style="margin-left: 39px;">
-                            
-                        <br></br>
-                        <label for="password" style="margin-left:350px;">Contraseña:</label>
-                        <input type="password" id="password" name="password" style="margin-left: 5px;">
-                            
-                        <button type="button" class="password-toggle" id="passwordToggle" aria-label="Toggle password visibility">
-                            <span class="toggle-text">Mostrar</span>
-                         </button>
-                
-                        <br></br>
-                        <input type="checkbox" id="remember" name="remember"style="margin-left:450px;">
-                        <label for="remember" >
-                            <strong>Recordarme</strong>
-                        </label>
-                    </td>
-                </tr>
-            </form>
-            <tr>
-                <td colspan = "2" style="width: 80%; text-align: center; padding: 0;">
-                    <br></br>
-                    <a href="#">¿Olvidaste tu contraseña?</a>
-                    <br></br>
-                    <button type="submit">
-                    <strong>Iniciar Sesión</strong>
+    <section class="login_panel">
+        <div class="login_encabezado">
+            <h2>Iniciar Sesión</h2>
+            <p>Ingrese sus credenciales</p>
+        </div>
+
+        <form action="#" method="POST">
+            <div class="login_credenciales">
+                <div class="login_fila">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="login_fila">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password">
+                    <button type="button" id="passwordToggle" aria-label="Toggle password visibility">
+                        <span class="toggle-text">Mostrar</span>
                     </button>
-                    <br></br>
-                    <strong>O</strong>
-                    <br></br>
-                    <button type="button">
-                        <strong>GOOGLE</strong>
-                    </button>
-                    <button type="button">
-                        <strong>GITHUB</strong>
-                    </button>
-                    <br></br>
+                </div>
+
+                <label class="login_recordar" for="remember">
+                    <input type="checkbox" id="remember" name="remember">
+                    <strong>Recordarme</strong>
+                </label>
+            </div>
+
+            <div class="login_acciones">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <button type="submit"><strong>Iniciar Sesión</strong></button>
+                <strong>O</strong>
+                <div class="login_opciones_sociales">
+                    <button type="button"><strong>GOOGLE</strong></button>
+                    <button type="button"><strong>GITHUB</strong></button>
+                </div>
+
+                <div>
                     <strong>¿No tienes una cuenta?</strong>
                     <a href="#">Crear una cuenta</a>
-                </td>
-            </tr>
-        </table>
+                </div>
+            </div>
+        </form>
     </section>
     <!-- Banner principal con la imagen destacada de Zelda -->
     <section>

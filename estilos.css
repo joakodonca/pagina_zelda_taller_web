@@ -13,7 +13,8 @@ header,
 .contenido_principal,
 .sitios_info,
 .pie_pagina,
-.form_contacto {
+.form_contacto,
+.login_panel {
     width: min(90%, 2000px);
     margin: 20px auto;
 }
@@ -31,8 +32,6 @@ header,
 header {
     display: flex;
     align-items: center;
-    padding: 0;
-    background-color: white;
 }
 
 nav {
@@ -40,7 +39,6 @@ nav {
     gap: 8px;
     margin-left: auto;
     margin-right: 15px;
-    padding: 0;
 }
 
 .boton_nav {
@@ -72,15 +70,55 @@ nav {
     object-fit: contain;
 }
 
+.login_encabezado {
+    padding: 16px 0;
+}
+
+.login_panel {
+    text-align: center;
+}
+
+.login_credenciales {
+    text-align: left;
+}
+
+.login_fila {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    padding: 8px 300px;
+}
+
+.login_fila input {
+    width: 100%;
+}
+
+.login_recordar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.login_acciones {
+    display: grid;
+    justify-items: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.login_opciones_sociales {
+    display: flex;
+    gap: 8px;
+}
+
 .banner_imagen {
     display: block;
     width: 100%;
     height: 250px;
     object-fit: cover;
-}
-
-.form_contacto {
-    text-align: left;
 }
 
 .fila_form {
@@ -243,11 +281,8 @@ nav {
     gap: 8px;
 }
 
-.grupo_redes a, .grupo_redes img {
-    display: block;
-}
-
 .grupo_redes img {
+    display: block;
     width: 45px;
     height: 45px;
     object-fit: contain;
