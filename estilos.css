@@ -2,7 +2,19 @@
     box-sizing: border-box;
 }
 
-body {
+.body_index {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(0, 151, 73);
+}
+
+.body_contacto {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.body_login {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: white;
@@ -11,7 +23,9 @@ body {
 header,
 .banner_principal,
 .contenido_principal,
-.sitios_info,
+.sitios_info_index,
+.sitios_info_contacto,
+.sitios_info_login,
 .pie_pagina,
 .form_contacto,
 .login_panel {
@@ -20,18 +34,23 @@ header,
 }
 
 header,
+.sitios_info_index,
+.sitios_info_contacto,
+.sitios_info_login,
+.pie_pagina {
+    border: 2px solid rgb(0, 204, 255);
+}
 .banner_principal,
 .multimedia_video,
 .multimedia_imagen,
-.descripcion_juego,
-.sitios_info,
-.pie_pagina {
-    border: 2px solid black;
+.descripcion_juego {
+    border: 2px solid rgb(0,0,0);
 }
 
 header {
     display: flex;
     align-items: center;
+    background-color: rgb(255, 255, 255);
 }
 
 nav {
@@ -39,20 +58,19 @@ nav {
     gap: 8px;
     margin-left: auto;
     margin-right: 15px;
+    background-color: rgb(255, 255, 255);
 }
 
 .boton_nav {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 auto;
     cursor: pointer;
     font-size: 14px;
     min-height: 32px;
     padding: 6px 13px;
     border: 2px solid black;
-    white-space: nowrap;
-    text-decoration: none;
+    background-color: rgb(255, 255, 255);
     color: black;
 }
 .boton_nav_activo{
@@ -251,10 +269,23 @@ nav {
 }
 
 
-.sitios_info {
+.sitios_info_index {
     display: grid;
     grid-template-columns: 33% 34% 33%;
     text-align: center;
+    background-color: rgb(0, 255, 123);
+}
+.sitios_info_contacto {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    text-align: center;
+    background-color: rgb(220, 102, 102);
+}
+.sitios_info_login {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    text-align: center;
+    background-color: rgb(220, 102, 102);
 }
 
 .grupo_info {
@@ -283,6 +314,7 @@ nav {
 
 .grupo_redes img {
     display: block;
+    padding: 2px;
     width: 45px;
     height: 45px;
     object-fit: contain;
@@ -291,4 +323,5 @@ nav {
 .pie_pagina {
     padding: 12px;
     text-align: center;
+    background-color: rgb(195, 193, 193);
 }
