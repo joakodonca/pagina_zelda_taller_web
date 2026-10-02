@@ -17,7 +17,7 @@
 .body_login {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: rgb(252, 144, 36);
 }
 
 header,
@@ -50,7 +50,7 @@ header,
 header {
     display: flex;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(195, 193, 193);
 }
 
 nav {
@@ -58,7 +58,7 @@ nav {
     gap: 8px;
     margin-left: auto;
     margin-right: 15px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(195, 193, 193);
 }
 
 .boton_nav {
@@ -107,10 +107,12 @@ nav {
     align-items: center;
     column-gap: 8px;
     padding: 8px 300px;
+    font-size: bold;
 }
 
 .login_fila input {
     width: 100%;
+    background-color: rgb(255, 203, 134);
 }
 
 .login_recordar {
@@ -130,6 +132,11 @@ nav {
 .login_opciones_sociales {
     display: flex;
     gap: 8px;
+}
+.login_boton{
+    border: 2px solid black;
+    background-color: rgb(255, 203, 134);
+    cursor: pointer;
 }
 
 .banner_imagen {
@@ -285,7 +292,7 @@ nav {
     display: grid;
     grid-template-columns: 33% 34% 33%;
     text-align: center;
-    background-color: rgb(220, 102, 102);
+    background-color: rgb(255, 179, 86);
 }
 
 .grupo_info {
