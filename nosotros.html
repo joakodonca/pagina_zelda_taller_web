@@ -3,77 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de inicio de sesión</title>
+    <title>Sobre nosotros</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
-
-<body class="body_login">
+<body class="body_nosotros">
     <header>
         <img src="imagenes-zelda/logo-pequeño.png" alt="logozelda" class="logo">
-         <nav>
+        <nav>
             <a class="boton_nav" href="index.html">Inicio</a>
-            <a class="boton_nav" href="nosotros.html">Sobre nosotros</a>
-            <a class="boton_nav boton_nav_activo" href="login.html">Inicio de sesión</a>
+            <a class="boton_nav boton_nav_activo" href="nosotros.html">Sobre nosotros</a>
+            <a class="boton_nav" href="login.html">Inicio de sesión</a>
             <a class="boton_nav" href="contacto.html">Contacto</a>
         </nav>
     </header>
-    <!-- Banner principal con la imagen destacada de Zelda -->
+
     <section>
         <div class="banner_principal">
             <img src="imagenes-zelda/imagen1-zelda.png" alt="Imagen1Zelda" class="banner_imagen">
         </div>
     </section>
-    <section class="login_panel">
-        <div class="login_encabezado">
-            <h2>Iniciar Sesión</h2>
-            <p>Ingrese sus credenciales</p>
-        </div>
 
-        <form action="#" method="POST">
-            <div class="login_credenciales">
-                <div class="login_fila">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
-                </div>
-
-                <div class="login_fila">
-                    <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password">
-                    <button type="button" id="passwordToggle" aria-label="Toggle password visibility">
-                        <span class="toggle-text">Mostrar</span>
-                    </button>
-                </div>
-
-                <label class="login_recordar" for="remember">
-                    <input type="checkbox" id="remember" name="remember">
-                    <strong>Recordarme</strong>
-                </label>
-            </div>
-
-            <div class="login_acciones">
-                <a href="#">¿Olvidaste tu contraseña?</a>
-                <button type="button" class="login_boton"><strong>Iniciar Sesión</strong></button>
-                <strong>O</strong>
-                <div class="login_opciones_sociales">
-                    <button type="button" class="login_boton"><strong>GOOGLE</strong></button>
-                    <button type="button" class="login_boton"><strong>GITHUB</strong></button>
-                </div>
-
-                <div>
-                    <strong>¿No tienes una cuenta?</strong>
-                    <a href="#">Crear una cuenta</a>
-                </div>
-            </div>
-        </form>
-    </section>
-    <!-- Banner principal con la imagen destacada de Zelda -->
-    <section>
-        <div class="banner_principal">
-            <img src="imagenes-zelda/imagen3-zelda.png" alt="Imagen3Zelda" class="banner_imagen">
-        </div>
-    </section>
-
-    <aside class="sitios_info_login">
+    <aside class="sitios_info_nosotros">
         <section class="grupo_info">
             <h3>Sitios web de compra</h3>
             <div class="lista_info">
@@ -110,5 +60,6 @@
             <h3>&copy; Joaquin Donoso Campusano 2026</h3>
         </div>
     </footer>
+    
 </body>
 </html>
