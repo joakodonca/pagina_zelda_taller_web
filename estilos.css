@@ -27,7 +27,8 @@ header,
 .sitios_info,
 .pie_pagina,
 .form_contacto,
-.login_panel {
+.login_panel,
+.nosotros_banner {
     width: min(90%, 2000px);
     margin: 20px auto;
 }
@@ -78,7 +79,6 @@ nav {
     background-color: rgb(230, 230, 230);
 }
 
-
 .logo{
     width: 50px;
     height: 50px;
@@ -87,10 +87,11 @@ nav {
 
 .contenido_nosotros {
     display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 24px;
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    gap: 30px;
     align-items: center;
-    padding: 16px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 .nosotros_texto {
     min-width: 0;
@@ -100,18 +101,34 @@ nav {
     font-size: 75px;
     text-align: center;
 }
+
 .nosotros_texto p {
-    font-size: 15px;
+    font-size: 16px;
     padding-top: 16px;
     padding-right: 32px;
+    line-height: 2;
 }
-
 .nosotros_imagen {
-    display: block;
     width: 100%;
-    max-height: 360px;
-    object-fit: contain;
+    max-height: 450px;
+    object-fit: cover;
     min-width: 0;
+    border: 2px solid rgb(0, 204, 255);
+    background-color: rgb(255, 255, 255);
+}
+.nosotros_banner {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(0, 204, 255);
+    height: 200px;
+    background-color: rgb(19, 255, 165);
+}
+.nosotros_banner_img {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 100%;
+    object-fit: contain;
+    padding: 16px;
 }
 
 .login_encabezado {
@@ -373,36 +390,3 @@ nav {
     background-color: rgb(195, 193, 193);
 }
 
-@media (max-width: 700px) {
-    header {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-        padding: 8px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0;
-    }
-
-    .contenido_nosotros {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 16px;
-        height: auto;
-        padding: 16px;
-    }
-
-    .nosotros_texto p {
-        padding: 0;
-    }
-
-    .nosotros_imagen {
-        max-height: 280px;
-    }
-
-    .sitios_info {
-        grid-template-columns: minmax(0, 1fr);
-    }
-}
