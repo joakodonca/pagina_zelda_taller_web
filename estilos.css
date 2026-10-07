@@ -28,7 +28,10 @@ header,
 .pie_pagina,
 .form_contacto,
 .login_panel,
-.nosotros_banner {
+.nosotros_banner,
+.descripcion_juego,
+.contenido_desplegable,
+.contenedor_video {
     width: min(90%, 2000px);
     margin: 20px auto;
 }
@@ -39,10 +42,14 @@ header,
     border: 2px solid rgb(0, 204, 255);
 }
 .banner_principal,
-.multimedia_video,
-.multimedia_imagen,
-.descripcion_juego {
+.contenido_desplegable,
+.contenedor_video,
+.contenido_principal img{
     border: 2px solid rgb(0,0,0);
+}
+
+.banner_principal_rediseño{
+    object-fit: fill;
 }
 
 header {
@@ -287,32 +294,81 @@ nav {
     grid-template-columns: 38% calc(62% - 16px);
     column-gap: 16px;
 }
+.contenido_principal p {
+    margin-top: 100px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 2;
+}
+.contenido_principal img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 0;
+    background-color: rgb(255, 255, 255);
 
-.contenido_multimedia {
-    display: grid;
-    grid-template-rows: calc(50% - 5px) calc(50% - 5px);
-    gap: 10px;
-    contain: size;
 }
 
-.multimedia_video, .multimedia_imagen {
-    display: block;
+.contenedor_video{
+    display: grid;
+    grid-template-columns: calc(60% - 8px) calc(40% - 8px);
+    gap: 16px;
+    background-color: azure;
+}
+
+.fila_video {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.fila_video h1 {
+    font-size: 75px;
+    text-align: center;
+}
+
+.fila_video button{
+    padding: 8px 30px;
+    border: 2px solid black;
+    background-color: rgb(0, 255, 123);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.contenedor_video video {
+    padding: 20px;
     width: 100%;
     height: 100%;
     min-height: 0;
     object-fit: cover;
-    background-color: white;
+}
+
+.contenido_principal img,
+.desplegable summary,
+.boton_nav,
+.fila_video button {
+    transition: transform 0.3s ease;
+}
+
+.contenido_principal img:hover,
+.desplegable summary:hover,
+.boton_nav:hover,
+.fila_video button:hover {
+    transform: scale(1.04);
 }
 
 .descripcion_juego {
     min-width: 0;
     min-height: 0;
     padding: 0 20px 16px;
-    background-color: rgb(202, 202, 202);
     text-align: center;
+    background-color: rgb(195, 193, 193);
 }
 
 .descripcion_juego h1 {
+    padding-top: 25px;
     font-size: 75px;
 }
 
@@ -323,7 +379,7 @@ nav {
 }
 
 .texto_verde {
-    color: rgb(0, 151, 73);
+    color: rgb(0, 0, 0);
 }
 
 .referencias {
@@ -336,7 +392,7 @@ nav {
 
 .sitios_info {
     display: grid;
-    grid-template-columns: 33% 34% 33%;
+    grid-template-columns: 25% 25% 25% 25%;
     text-align: center;
 }
 
@@ -351,6 +407,12 @@ nav {
 }
 .color_info_nosotros {
     background-color: rgb(19, 255, 165);
+}
+
+.grupo_info p {
+    font-size: 14px;
+    text-align: justify;
+    padding: 0 12px;
 }
 
 .grupo_info {
@@ -390,3 +452,34 @@ nav {
     background-color: rgb(195, 193, 193);
 }
 
+.desplegable {
+   text-align: center;
+}
+
+.desplegable summary {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    min-height: 32px;
+    padding: 6px 13px;
+    background-color: rgb(0, 255, 123);
+    border: 2px solid black;
+    cursor: pointer;
+    list-style: none;
+}
+
+.desplegable summary::-webkit-details-marker {
+    display: none;
+}
+
+.contenido_desplegable {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: rgb(0, 255, 123);
+}
+
+.texto_desplegable {
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+}
