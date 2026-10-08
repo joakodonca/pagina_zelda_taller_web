@@ -8,15 +8,24 @@ body{
 }
 
 .color_index {
+    animation-name: animacion_fondo_index;
+    animation-duration: 1s;
     background-color: rgb(0, 151, 73);
+    
 }
 .color_contacto {
+    animation-name: animacion_fondo_contacto;
+    animation-duration: 1s;
     background-color: rgb(57, 106, 255);
 }
 .color_login {
+    animation-name: animacion_fondo_login;
+    animation-duration: 1s;
     background-color: rgb(252, 144, 36);
 }
 .color_nosotros {
+    animation-name: animacion_fondo_nosotros;
+    animation-duration: 1s;
     background-color: rgb(140, 255, 211);
 }
 
@@ -40,16 +49,27 @@ header,
 .sitios_info,
 .pie_pagina {
     border: 2px solid rgb(0, 204, 255);
+    border-radius: 8px;
 }
-.banner_principal,
+
 .contenido_desplegable,
 .contenedor_video,
 .contenido_principal img{
     border: 2px solid rgb(0,0,0);
+    border-radius: 8px;
 }
 
 .banner_principal_rediseño{
     object-fit: fill;
+    width: min(90%, 2000px);
+    height: auto;
+    margin: 10px auto;
+}
+.banner_principal_rediseño img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 header {
@@ -74,6 +94,7 @@ nav {
     min-height: 32px;
     padding: 6px 13px;
     border: 2px solid black;
+    border-radius: 8px;
     background-color: rgb(255, 255, 255);
     color: black;
     text-decoration: none;
@@ -122,14 +143,21 @@ nav {
     min-width: 0;
     border: 2px solid rgb(0, 204, 255);
     background-color: rgb(255, 255, 255);
+    border-radius: 8px;
 }
+.nosotros_imagen img {
+    border-radius: 8px;
+}
+
 .nosotros_banner {
     display: flex;
     align-items: center;
     border: 2px solid rgb(0, 204, 255);
     height: 200px;
     background-color: rgb(19, 255, 165);
+    border-radius: 8px;
 }
+
 .nosotros_banner_img {
     flex: 1 1 0;
     min-width: 0;
@@ -186,6 +214,7 @@ nav {
 
 .login_boton{
     border: 2px solid black;
+    border-radius: 4px;
     background-color: rgb(255, 203, 134);
     cursor: pointer;
 }
@@ -231,6 +260,7 @@ nav {
     width: 100%;
     padding: 8px;
     border: 2px solid black;
+    border-radius: 4px;
     font: inherit;
     background-color: rgb(4, 0, 228);
 }
@@ -263,6 +293,7 @@ nav {
 .form_contacto input[type="date"] {
     padding: 8px;
     border: 2px solid black;
+    border-radius: 4px;
     background-color: rgb(4, 0, 228);
 }
 
@@ -271,6 +302,7 @@ nav {
     height: 36px;
     padding: 2px;
     border: 2px solid black;
+    border-radius: 4px;
     background-color: rgb(4, 0, 228);
 }
 .form_contacto input::placeholder,
@@ -285,6 +317,7 @@ nav {
 .boton_form button {
     padding: 8px 30px;
     border: 2px solid black;
+    border-radius: 4px;
     background-color: rgb(7, 230, 255);
     cursor: pointer;
 }
@@ -300,7 +333,9 @@ nav {
     text-align: center;
     line-height: 2;
 }
+
 .contenido_principal img {
+    border-radius: 50%;
     display: block;
     width: 100%;
     height: 100%;
@@ -332,6 +367,7 @@ nav {
 .fila_video button{
     padding: 8px 30px;
     border: 2px solid black;
+    border-radius: 4px;
     background-color: rgb(0, 255, 123);
     cursor: pointer;
     margin-bottom: 20px;
@@ -466,6 +502,7 @@ nav {
     border: 2px solid black;
     cursor: pointer;
     list-style: none;
+    border-radius: 8px;
 }
 
 .desplegable summary::-webkit-details-marker {
@@ -482,4 +519,24 @@ nav {
     text-align: center;
     font-size: 14px;
     padding: 20px;
+}
+
+@keyframes animacion_fondo_index {
+  from {background-color: rgb(255, 255, 255);}
+  to {background-color: rgb(0, 151, 73);}
+}
+
+@keyframes animacion_fondo_login {
+  from {background-color: rgb(255, 255, 255);}
+  to {background-color: rgb(252, 144, 36);}
+}
+
+@keyframes animacion_fondo_contacto {
+  from {background-color: rgb(255, 255, 255);}
+  to {background-color: rgb(57, 106, 255)}
+}
+
+@keyframes animacion_fondo_nosotros {
+  from {background-color: rgb(255, 255, 255);}
+  to {background-color: rgb(140, 255, 211);}
 }
