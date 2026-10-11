@@ -521,6 +521,42 @@ nav {
     padding: 20px;
 }
 
+.carousel{
+    margin-top: 10px;
+}
+
+.video-carrusel {
+    width: 100%;
+    margin: 0 auto;
+}
+.carousel-item > img {
+    width: 100%;
+    aspect-ratio: 24 / 9;
+    object-fit: cover;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+    margin: 0 auto;
+    width: fit-content;
+    color: white;
+    background-color: rgb(25, 135, 84);
+    box-shadow: none;
+    border-radius: 4px;
+}
+.accordion-button::after {
+    margin-left: 8px;
+}
+#accordionExample > .accordion-item {
+    background-color: transparent;
+    border: 0;
+}
+.accordion-body{
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
 @keyframes animacion_fondo_index {
   from {background-color: rgb(255, 255, 255);}
   to {background-color: rgb(0, 151, 73);}
