@@ -521,8 +521,14 @@ nav {
     padding: 20px;
 }
 
-.carousel{
-    margin-top: 10px;
+.texto-verde-claro {
+    color: #b8f5c8;
+}
+
+.tarjeta-personaje .card-img-top {
+    height: 240px;
+    object-fit: contain;
+    background-color: white;
 }
 
 .video-carrusel {
