@@ -29,7 +29,7 @@ body{
     background-color: rgb(140, 255, 211);
 }
 
-header,
+.header,
 .banner_principal,
 .contenido_principal,
 .contenido_nosotros,
@@ -45,7 +45,7 @@ header,
     margin: 20px auto;
 }
 
-header,
+.header,
 .sitios_info,
 .pie_pagina {
     border: 2px solid rgb(0, 204, 255);
@@ -72,7 +72,7 @@ header,
     border-radius: 8px;
 }
 
-header {
+.header {
     display: flex;
     align-items: center;
     background-color: rgb(195, 193, 193);
