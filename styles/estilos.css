@@ -477,9 +477,16 @@ nav {
 
 .grupo_redes img {
     padding: 2px;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
+}
+
+.grupo_redes .list-group-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .pie_pagina {
