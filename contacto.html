@@ -10,7 +10,7 @@
     
 </head>
 
-<body class="color_contacto">
+<body class="bg-success bg-opacity-75">
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
             <img src="imagenes-zelda/logo-pequeño.png" alt="logozelda" class="logo">
@@ -36,122 +36,227 @@
         </nav>
     </header>
 
-    <section>
-        <div class="banner_principal_rediseño">
-            <img src="imagenes-zelda/imagen1-zelda.png" alt="Imagen1Zelda" class="banner_imagen">
+    <section class="container-xl my-5">
+         <div class="row">
+            <div class="col-12">
+                <h1 class="display-5 fw-bold text-center fst-italic mb-0">
+                    The Legend of Zelda: Breath of the Wild
+                </h1>
+            </div>
         </div>
     </section>
 
-    <form class="form_contacto" action="#" method="POST">
-        <div class="fila_form">
-            <label class="etiqueta_form" for="primer_nombre">Nombres:</label>
-            <div class="campos_nombres">
-                <input id="primer_nombre" type="text" name="primer_nombre" placeholder="Primer Nombre">
-                <input id="segundo_nombre" type="text" name="segundo_nombre" placeholder="Segundo Nombre" aria-label="Segundo nombre">
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide container-fluid my-5">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagenes-zelda/wallpaper4k.jpg" alt="Imagen1Zelda" class="d-block w-80 rounded-3">
+                </div>
+                <div class="carousel-item">
+                    <div class="ratio ratio-21x9 video-carrusel">
+                        <video controls preload="metadata" playsinline>
+                            <source src="imagenes-zelda/video-zelda.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes-zelda/imagen3-zelda.png" alt="Imagen3Zelda" class="d-block w-80 rounded-3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <form id="form-contacto-bootstrap" class="container-xl" action="#" method="POST">
+        <div class="row g-3 mb-3">
+            <label class="form-label">Nombre y apellidos:</label>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Apellidos" aria-label="Last name">
             </div>
         </div>
 
-        <div class="fila_form">
-            <label class="etiqueta_form" for="email">Email:</label>
-            <input id="email" type="email" name="email" placeholder="Eje: nombre@gmail.com">
+        <label for="Email" class="form-label">Ingrese correo:</label>
+        <div class="input-group mb-3">
+            <input type="email" placeholder="Ej: email@ejemplo.com" class="form-control" id="Email">
         </div>
 
-        <div class="fila_form">
-            <label class="etiqueta_form" for="telefono">Teléfono:</label>
-            <div class="campos_telefono">
-                <input id="prefijo" type="text" name="prefijo" value="+569" aria-label="Prefijo telefónico">
-                <input id="telefono" type="tel" name="telefono" placeholder="12345678">
+        <label for="telefono-contacto" class="form-label">Teléfono:</label>
+        <div class="input-group mb-3">
+            <input type="tel" class="form-control" id="telefono-contacto" name="telefono" placeholder="Ej: +56 9 1234 5678" autocomplete="tel">
+        </div>
+
+        <label for="exampleDataList" class="form-label">Asunto:</label>
+        <div class="input-group mb-3">
+            <input class="form-control" list="datalistOptions" id="exampleDataList">
+            <datalist id="datalistOptions">
+                <option value="Otro">
+                <option value="Soporte">
+                <option value="Consulta">
+            </datalist>
+        </div>
+
+        <label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
+        <div class="input-group mb-3">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Envia tu mensaje..."></textarea>
+        </div>
+
+        <label class="form-label">Sube tu archivo:</label>
+        <div class="input-group mb-3">
+            <input type="file" class="form-control" id="inputGroupFile02">
+            <label class="input-group-text" for="inputGroupFile02">Subir</label>
+        </div>
+
+        <label for="fecha-nacimiento" class="form-label">Fecha de nacimiento:</label>
+        <div class="input-group mb-3">
+            <input type="date" class="form-control" id="fecha-nacimiento" name="fecha_nacimiento">
+        </div>
+
+        <div class="row g-3 mb-3">
+            <div class="col-12 col-md-4">
+                <label class="form-label">Sexo:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sexo" value="hombre" id="flexRadio1">
+                    <label class="form-check-label" for="flexRadio1">Hombre</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sexo" value="mujer" id="flexRadio2">
+                    <label class="form-check-label" for="flexRadio2">Mujer</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sexo" value="otro" id="flexRadio3">
+                    <label class="form-check-label" for="flexRadio3">Otro</label>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <label class="form-label">Áreas de interés:</label>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch1">
+                    <label class="form-check-label" for="flexSwitch1">Compra</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch2">
+                    <label class="form-check-label" for="flexSwitch2">Reseña</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch3">
+                    <label class="form-check-label" for="flexSwitch3">Gameplays</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch4">
+                    <label class="form-check-label" for="flexSwitch4">Videos</label>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <label for="exampleColorInput" class="form-label">Selector de color:</label>
+                <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Elige un color">
             </div>
         </div>
-
-        <div class="fila_form">
-            <label class="etiqueta_form" for="asunto">Asunto:</label>
-            <select id="asunto" name="asunto">
-                <option value="otro">Otro</option>
-                <option value="soporte">Soporte</option>
-                <option value="consulta">Consulta</option>
-            </select>
+        
+        <div class="input-group mb-3">
+            <button type="submit" class="btn btn-success">Enviar</button>
         </div>
 
-        <div class="fila_form">
-            <label class="etiqueta_form" for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje..."></textarea>
-        </div>
-
-        <div class="fila_form">
-            <span class="etiqueta_form" id="etiqueta_sexo">Sexo:</span>
-            <div class="opciones_form" role="group" aria-labelledby="etiqueta_sexo">
-                <label><input id="masculino" type="radio" name="sexo" value="masculino">Masculino</label>
-                <label><input id="femenino" type="radio" name="sexo" value="femenino">Femenino</label>
-                <label><input id="otros" type="radio" name="sexo" value="otros">Otros</label>
-            </div>
-        </div>
-
-        <div class="fila_form">
-            <span class="etiqueta_form" id="etiqueta_intereses">Áreas de interés:</span>
-            <div class="opciones_form" role="group" aria-labelledby="etiqueta_intereses">
-                <label><input id="compra" type="checkbox" name="interes" value="compra">Compra</label>
-                <label><input id="resena" type="checkbox" name="interes" value="reseña">Reseña</label>
-                <label><input id="gameplays" type="checkbox" name="interes" value="gameplays">Gameplays</label>
-                <label><input id="videos" type="checkbox" name="interes" value="videos">Videos</label>
-            </div>
-        </div>
-
-        <div class="fila_form">
-            <label class="etiqueta_form" for="fecha">Fecha de nacimiento:</label>
-            <input id="fecha" type="date" name="fecha">
-        </div>
-
-        <div class="fila_form">
-            <label class="etiqueta_form" for="color">Color:</label>
-            <input id="color" type="color" name="color">
-        </div>
-
-        <div class="fila_form">
-            <label class="etiqueta_form" for="file">Archivo:</label>
-            <input id="file" type="file" name="file">
-        </div>
-
-        <div class="boton_form">
-            <button type="submit">Enviar</button>
+        <div class="progress mb-3">
+            <div class="bg-success progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
         </div>
     </form>
 
-    <aside class="sitios_info color_info_contacto">
-        <section class="grupo_info">
-            <h3>Sitios web de compra</h3>
-            <div class="lista_info">
-                <a href="https://www.nintendo.com/es-cl/store/products/the-legend-of-zelda-breath-of-the-wild-switch/?srsltid=AU7gw4V14s-6I4wF00ZSldGZVlxAf1OIQEkdbyFGH-yXofG9So1y1Ynr" target="_blank" rel="noopener noreferrer">Nintendo eShop</a>
-                <a href="https://www.falabella.com/falabella-cl/product/152741220/legend-of-zelda-breath-of-the-wild-n-switch-2/152741222" target="_blank" rel="noopener noreferrer">Falabella</a>
-                <a href="https://www.mercadolibre.cl/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2/p/MLC49831420?matt_tool=16931662&amp;utm_source=google_shopping&amp;utm_medium=organic&amp;pdp_filters=item_id%3AMLC1624244183&amp;from=gshop">Mercado Libre</a>
+    <aside class="container-xl my5">
+        <div class="row mx-0 rounded bg-secondary py-4 shadow-lg">
+            <div class="col">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-secondary text-white">
+                        <h4>Sitios web oficiales</h4>
+                    </li>
+                    <li class="list-group-item bg-secondary text-white">
+                        <p> Aquí puedes encontrar los sitios web oficiales de Nintendo y The Legend of Zelda, donde podrás obtener información actualizada sobre el juego, noticias, eventos y más.
+                        </p>
+                    </li>
+                </ul>
             </div>
-        </section>
-        
-        <section class="grupo_info">
-            <h3>Sitios web de reseñas</h3>
-            <div class="lista_info">
-                <a href="https://vandal.elespanol.com/analisis/switch/the-legend-of-zelda-breath-of-the-wild/43030#p-83" target="_blank" rel="noopener noreferrer">Vandal</a>
-                <a href="https://www.3djuegos.com/juegos/the-legend-of-zelda-breath-of-the-wild/analisis/es-leyenda-170302-7920" target="_blank" rel="noopener noreferrer">3D Juegos</a>
-                <a href="https://www.ign.com/articles/2017/03/02/the-legend-of-zelda-breath-of-the-wild-review" target="_blank" rel="noopener noreferrer">IGN</a>
-            </div>
-        </section>
 
-        <section class="grupo_info grupo_redes" aria-label="Redes sociales">
-            <a href="https://www.facebook.com/LegendofZelda">
-                <img src="imagenes-zelda/fb.png" alt="Facebook">
-            </a>
-            <a href="https://whatsapp.com/channel/0029VaTkyaQLY6d8rj26pM0A">
-                <img src="imagenes-zelda/wsp.webp" alt="WhatsApp">
-            </a>
-            <a href="https://www.instagram.com/nintendoamerica/">
-                <img src="imagenes-zelda/ig.avif" alt="Instagram">
-            </a>
-        </section>
+            <div class="col">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-secondary text-white">
+                        <h4>Sitios web de compra</h4>
+                        
+                    </li>
+                    <li class="list-group-item bg-secondary">
+                        <a href="https://www.nintendo.com/es-cl/store/products/the-legend-of-zelda-breath-of-the-wild-switch/?srsltid=AU7gw4V14s-6I4wF00ZSldGZVlxAf1OIQEkdbyFGH-yXofG9So1y1Ynr" target="_blank" rel="noopener noreferrer" class="link-info">Nintendo eShop</a>
+                    </li>
+                    <li class="list-group-item bg-secondary">
+                        <a href="https://www.falabella.com/falabella-cl/product/152741220/legend-of-zelda-breath-of-the-wild-n-switch-2/152741222" target="_blank" rel="noopener noreferrer" class="link-info">Falabella</a>
+                    </li>
+                    <li class="list-group-item bg-secondary">
+                        <a href="https://www.mercadolibre.cl/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-2/p/MLC49831420?matt_tool=16931662&amp;utm_source=google_shopping&amp;utm_medium=organic&amp;pdp_filters=item_id%3AMLC1624244183&amp;from=gshop" class="link-info">Mercado Libre</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-secondary text-white">
+                        <h4>Sitios web de reseñas</h4>
+                    </li>
+                    <li class="list-group-item bg-secondary">
+                        <a href="https://vandal.elespanol.com/analisis/switch/the-legend-of-zelda-breath-of-the-wild/43030#p-83" class="link-info" target="_blank" rel="noopener noreferrer">Vandal</a>
+                    </li>
+                    <li class="list-group-item bg-secondary">
+                        <a href="https://www.3djuegos.com/juegos/the-legend-of-zelda-breath-of-the-wild/analisis/es-leyenda-170302-7920" class="link-info" target="_blank" rel="noopener noreferrer">3D Juegos</a>
+                    </li>
+                    <li class="list-group-item bg-secondary">
+                        <a href="https://www.ign.com/articles/2017/03/02/the-legend-of-zelda-breath-of-the-wild-review" class="link-info" target="_blank" rel="noopener noreferrer">IGN</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="list-group list-group-flush grupo_redes">
+                    <li class="list-group-item bg-secondary text-white">
+                        <h4>Redes Sociales</h4>
+                    </li>
+                    <li class="list-group-item bg-secondary">
+                        <a href="https://www.facebook.com/LegendofZelda" class="link-info">
+                            <img src="imagenes-zelda/fb.png" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="list-group-item bg-secondary">
+                        <a href="https://whatsapp.com/channel/0029VaTkyaQLY6d8rj26pM0A" class="link-info">
+                            <img src="imagenes-zelda/wsp.webp" alt="WhatsApp">
+                        </a>
+                    </li>
+
+                    <li class="list-group-item bg-secondary">
+                        <a href="https://www.instagram.com/nintendoamerica/" class="link-info">
+                            <img src="imagenes-zelda/ig.avif"  alt="Instagram">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </aside>
 
-    <footer>
-        <div class="pie_pagina">
-            <h3>&copy; Joaquin Donoso Campusano 2026</h3>
+    <footer class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="text-white">© Joaquin Donoso Campusano 2026</span>
+            </div>
         </div>
     </footer>
     <script src="styles/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>

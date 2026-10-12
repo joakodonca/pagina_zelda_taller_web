@@ -384,14 +384,19 @@ nav {
 .contenido_principal img,
 .desplegable summary,
 .boton_nav,
-.fila_video button {
+.fila_video button,
+.btn, .accordion-button,
+.grupo_redes img{
     transition: transform 0.3s ease;
 }
 
 .contenido_principal img:hover,
 .desplegable summary:hover,
 .boton_nav:hover,
-.fila_video button:hover {
+.fila_video button:hover,
+.btn:hover,
+.accordion-button:hover,
+.grupo_redes img:hover{
     transform: scale(1.04);
 }
 
