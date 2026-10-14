@@ -149,6 +149,17 @@ nav {
     border-radius: 8px;
 }
 
+.imagen-mision {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen-card{
+    height: 350px;
+    object-fit:contain;
+}
+
 .nosotros_banner {
     display: flex;
     align-items: center;
@@ -386,7 +397,8 @@ nav {
 .boton_nav,
 .fila_video button,
 .btn, .accordion-button,
-.grupo_redes img{
+.grupo_redes img,
+.card{
     transition: transform 0.3s ease;
 }
 
@@ -396,7 +408,8 @@ nav {
 .fila_video button:hover,
 .btn:hover,
 .accordion-button:hover,
-.grupo_redes img:hover{
+.grupo_redes img:hover,
+.card:hover{
     transform: scale(1.04);
 }
 
