@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.icono-buscar {
+    width: 18px;
+    height: 18px;
+    object-fit: cover;
+}
+
+.texto-verde-claro {
+    color: #b8f5c8;
+}
+
+.imagen-mision {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.imagen-card {
+    height: 350px;
+    object-fit: contain;
+}
+
+.tarjeta-personaje .card-img-top {
+    height: 240px;
+    object-fit: contain;
+    background-color: #fff;
+}
+
+.video-carrusel {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.carousel-item > img {
+    width: 100%;
+    aspect-ratio: 24 / 9;
+    object-fit: cover;
+}
+
+.btn,
+.accordion-button,
+.grupo_redes img,
+.card {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover,
+.accordion-button:hover,
+.grupo_redes img:hover,
+.card:hover {
+    transform: scale(1.04);
+}
+
+.grupo_redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.grupo_redes img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    padding: 2px;
+    transition: transform 0.3s ease;
+}
+
+.grupo_redes img:hover {
+    transform: scale(1.04);
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+    width: fit-content;
+    margin: 0 auto;
+    color: #fff;
+    background-color: rgb(25, 135, 84);
+    box-shadow: none;
+    border-radius: 4px;
+}
+
+.accordion-button::after {
+    margin-left: 8px;
+}
+
+#accordionExample > .accordion-item {
+    background-color: transparent;
+    border: 0;
+}
+
+.accordion-body {
+    background-color: #fff;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.boton_volver_fijar {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.boton_volver_fijar.mostrar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition-delay: 0s;
+}

@@ -1,4 +1,4 @@
-* {
+﻿* {
     box-sizing: border-box;
 }
 
@@ -6,7 +6,9 @@ body{
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
+.fondoprueba{
+    background-color: blueviolet;
+}
 .color_index {
     animation-name: animacion_fondo_index;
     animation-duration: 1s;
