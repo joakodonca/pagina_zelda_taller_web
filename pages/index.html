@@ -101,7 +101,7 @@
         </nav>
     </header>
 
-    <section class="container-xl my-5">
+    <section class="aparecer-scroll container-xl my-5">
         <div class="row">
             <div class="col-12">
                 <h1 class="display-5 fw-bold text-center fst-italic mb-0">
@@ -111,7 +111,7 @@
         </div>
     </section>
 
-    <section>
+    <section class="aparecer-scroll">
         <div id="carouselExampleIndicators" class="carousel slide container-fluid my-5">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -145,8 +145,8 @@
         </div>
     </section>
 
-    <article class="rounded container-xl my-5">
-        <p class="lead text-center lh-lg bg-secondary rounded-3 shadow-lg p-4 p-md-4 text-white">
+    <article class="aparecer-scroll rounded container-xl my-5">
+        <p class="lead text-center lh-lg bg-secondary rounded-3 shadow-lg p-4 p-md-4 text-white" id="article">
             <em><strong>The Legend of Zelda: Breath of the Wild</strong></em> es un videojuego
             de <span class="texto-verde-claro">acción-aventura</span> de 2017 de la serie
             <em><span class="texto-verde-claro">The Legend of Zelda</span></em>,
@@ -163,7 +163,7 @@
         </p>
     </article>
 
-    <section>
+    <section class="aparecer-scroll">
         <div class="accordion container-sm my-5" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -196,10 +196,10 @@
         </div>
     </section>
 
-    <section class="container-xl py-4">
+    <section class="aparecer-scroll container-xl py-4">
         <div class="row align-items-stretch g-4">
             <div class="col-12 col-md-6">
-                <div class="card tarjeta-personaje h-100 shadow-lg">
+                <div class="card tarjeta-personaje h-100 shadow-lg" id="card-index1">
                     <img src="../imagenes-zelda/imagen2-zelda.png" class="card-img-top" alt="Link">
                     <div class="card-body">
                         <p class="card-text">
@@ -211,7 +211,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="card h-100">
+                <div class="card h-100" id="card-index2">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center text-center shadow-lg">
                         <h1 class="card-title">Disfruta del trailer en Youtube</p>
                         <button onclick="window.open('https://www.youtube.com/watch?v=ofH5ptn5w-A', '_blank')" class="btn btn-danger">Ver en YouTube</button>
@@ -221,7 +221,7 @@
         </div>
     </section>
 
-    <aside class="container-xl my5">
+    <aside class="aparecer-scroll container-xl my5">
         <div class="row mx-0 rounded bg-secondary py-4 shadow-lg">
             <div class="col">
                 <ul class="list-group list-group-flush">
@@ -302,11 +302,9 @@
         </div>
     </footer>
     
-    <div class="container-xl">
-        <button class="btn btn-success boton_volver_fijar" id="btn_volver">
-            Volver arriba
-        </button>
-    </div>
+    <button class="btn btn-light boton_volver_fijar rounded-circle" id="btn_volver">
+        <img src="../imagenes-zelda/flecha.png" alt="flecha" class="icono-flecha">
+    </button>
 
     <script src="../styles/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="../scripts/script.js"></script>

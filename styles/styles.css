@@ -60,15 +60,13 @@ img {
 
 .btn,
 .accordion-button,
-.grupo_redes img,
-.card {
+.grupo_redes img{
     transition: transform 0.3s ease;
 }
 
 .btn:hover,
 .accordion-button:hover,
-.grupo_redes img:hover,
-.card:hover {
+.grupo_redes img:hover{
     transform: scale(1.04);
 }
 
@@ -135,4 +133,29 @@ img {
     pointer-events: auto;
     transform: translateY(0);
     transition-delay: 0s;
+}
+ 
+.icono-flecha{
+    height: 40px;
+    width: 30px;
+}
+
+.aparecer-scroll{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.aparecer-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#card-index1,
+#card-index2 {
+    transform:
+        perspective(800px)
+        rotateX(var(--giro-x, 0deg))
+        rotateY(var(--giro-y, 0deg));
+    transition: transform 0.1s ease;
 }
