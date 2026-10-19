@@ -25,6 +25,7 @@ cartas3D.forEach((carta3D) => {
         const y = mov3D.offsetY;
         const giroX = (carta3D.clientHeight / 2 - y) / 40;
         const giroY = (x - carta3D.clientWidth / 2) / 40;
+
         carta3D.style.setProperty("--giro-x", `${giroX}deg`);
         carta3D.style.setProperty("--giro-y", `${giroY}deg`);
     });
@@ -53,13 +54,63 @@ secciones.forEach((seccion) => {
 
 const colorArticulo = document.querySelector("#article");
 
-
-colorArticulo.addEventListener("mouseenter", () => {
+if(colorArticulo){
+    colorArticulo.addEventListener("mouseenter", () => {
         colorArticulo.classList.remove("bg-secondary");
         colorArticulo.classList.add("bg-dark");
+    });
+
+    colorArticulo.addEventListener("mouseleave", () => {
+        colorArticulo.classList.remove("bg-dark");
+        colorArticulo.classList.add("bg-secondary");
+    });
+}
+
+
+
+const contenedores = document.querySelectorAll(".cont-cards");
+
+contenedores.forEach((contenedor) => {
+    const cartaOculta = contenedor.querySelector(".carta-oculta");
+    if (cartaOculta) {
+        contenedor.addEventListener("mouseenter", () => {
+            cartaOculta.classList.add("visible");
+        });
+
+        contenedor.addEventListener("mouseleave", () => {
+            cartaOculta.classList.remove("visible");
+        });
+    }
 });
 
-colorArticulo.addEventListener("mouseleave", () => {
-    colorArticulo.classList.remove("bg-dark");
-    colorArticulo.classList.add("bg-secondary");
-});
+const contador_texto = document.querySelector("#contador-opinion");
+const textTarea = document.querySelector("#exampleFormControlTextarea1");
+
+if(textTarea && contador_texto){
+    textTarea.addEventListener("input",() => {
+        const contador_letras = textTarea.value.replace(/\s/g, "").length;
+        contador_texto.textContent = `${contador_letras} caracteres`;
+    });
+}
+
+const formularioContacto = document.querySelector("#form-contacto-bootstrap");
+const telefonoContacto = document.querySelector("#telefono-contacto");
+
+if (formularioContacto && telefonoContacto) {
+    const validarTelefono = () => {
+        const cantidadCaracteres = telefonoContacto.value.replace(/\s/g, "").length;
+        telefonoContacto.setCustomValidity(
+            cantidadCaracteres === 12 ? "" : "El teléfono debe tener exactamente 12 caracteres, sin contar los espacios."
+        );
+    };
+
+    telefonoContacto.addEventListener("input", validarTelefono);
+    formularioContacto.addEventListener("submit", (evento) => {
+        validarTelefono();
+
+        if (!telefonoContacto.checkValidity()) {
+            evento.preventDefault();
+            telefonoContacto.reportValidity();
+        }
+    });
+}

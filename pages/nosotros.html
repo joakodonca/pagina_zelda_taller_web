@@ -166,17 +166,24 @@
                 </div>
             </div>
             <hr>
-            <div class="row p-5 ">
-                <div class="col">
+            <div class="row p-5">
+                <div class="col cont-cards mx-2">
                     <div class="card h-100">
                         <img src="../imagenes-zelda/logo-ns-webp.webp" alt="LogoNintendoBanner" class="imagen-card img-thumbnail card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Nintendo Switch</h5>
-                            <p class="card-text">Primer juego de la consola en salir a la venta.</p>
+                            <p class="card-text">Uno de los títulos de lanzamiento de Nintendo Switch.</p>
+                        </div>
+                    </div>
+                    <div class="card h-100 bg-dark text-white carta-oculta">
+                        <div class="card-body">
+                            <h2 class="card-title">Nintendo Switch</h2>
+                            <p class="card-text">Es una consola híbrida de Nintendo que puede usarse en modo portátil o conectada a un televisor. The Legend of Zelda: Breath of the Wild se publicó para ella en 2017.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col">
+
+                <div class="col cont-cards mx-2">
                     <div class="card h-100">
                         <img src="../imagenes-zelda/logo-zelda-png.png" alt="LogoZeldaBanner" class="imagen-card img-thumbnail card-img-top">
                         <div class="card-body">
@@ -184,8 +191,14 @@
                             <p class="card-text">El arma principal del protagonista.</p>
                         </div>
                     </div>
+                    <div class="card h-100 bg-dark text-white carta-oculta">
+                        <div class="card-body">
+                            <h2 class="card-title">La espada maestra</h2>
+                            <p class="card-text">Es la espada legendaria que Link encuentra en el Bosque Kolog. En Breath of the Wild, su poder aumenta cuando Link se enfrenta a la calamidad.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
+                <div class="col cont-cards mx-2">
                     <div class="card h-100">
                         <img src="../imagenes-zelda/zelda_logo_png2.png" alt="Logo2ZeldaBanner" class="imagen-card img-thumbnail card-img-top">
                         <div class="card-body">
@@ -193,13 +206,25 @@
                             <p class="card-text">Un poder divino.</p>
                         </div>
                     </div>
+                    <div class="card h-100 bg-dark text-white carta-oculta">
+                        <div class="card-body">
+                            <h2 class="card-title">La Trifuerza</h2>
+                            <p class="card-text">Es una reliquia sagrada formada por tres piezas: Poder, Sabiduría y Valor. En la saga, está vinculada a las diosas Din, Nayru y Farore.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
+                <div class="col cont-cards mx-2">
                     <div class="card h-100">
                         <img src="../imagenes-zelda/logo-wiiu.webp" alt="LogoWiiUBanner" class="imagen-card img-thumbnail card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Wii U</h5>
-                            <p class="card-text">El ultimo juego oficial de la consola.</p>
+                            <p class="card-text">Una consola de Nintendo en la que también se publicó Breath of the Wild.</p>
+                        </div>
+                    </div>
+                    <div class="card h-100 bg-dark text-white carta-oculta">
+                        <div class="card-body">
+                            <h2 class="card-title">Wii U</h2>
+                            <p class="card-text">Fue la consola de Nintendo anterior a Switch. Breath of the Wild se lanzó para Wii U y Nintendo Switch el 3 de marzo de 2017.</p>
                         </div>
                     </div>
                 </div>
@@ -241,16 +266,17 @@
     </section>
 
     <form id="form-contacto-bootstrap" class="container-xl aparecer-scroll" action="#" method="POST">
-
-        <div class="input-group mb-3">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mandanos tu opinion..."></textarea>
+        <div class="mb-3">
+            <p id="contador-opinion" class="text-end mb-1">0 caracteres</p>
+            <textarea class="form-control" id="exampleFormControlTextarea1"rows="3" placeholder="Mándanos tu opinión..."></textarea>
         </div>
+            
         <div class="row gx-2 align-items-center">
             <div class="col-md-auto">
                 <label for="telefono-contacto" class="form-label mb-0">Dejanos tu numero de telefono:</label>
             </div>
             <div class="col">
-                <input type="tel" class="form-control" id="telefono-contacto" name="telefono" placeholder="Ej: +56 9 1234 5678" autocomplete="tel">
+                <input type="tel" class="form-control" id="telefono-contacto" name="telefono" placeholder="Ej: +56 9 1234 5678" autocomplete="tel" required>
             </div>
         </div>
 
@@ -341,6 +367,9 @@
             </div>
         </div>
     </footer>
+    <button class="btn btn-light boton_volver_fijar rounded-circle" id="btn_volver">
+        <img src="../imagenes-zelda/flecha.png" alt="flecha" class="icono-flecha">
+    </button>
     <script src="../styles/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="../scripts/script.js"></script>
 </body>
