@@ -25,6 +25,10 @@
                     </li>
                 </ul>
 
+                <div class="d-flex align-items-center bg-white border border-success border-3 rounded px-3 py-2 mx-lg-3 my-2">
+                    <p class="text-success mb-0" id="Nombre_usuario">Sin sesión iniciada</p>
+                </div>
+
                 <form class="d-flex my-2 my-lg-0">
                     <input class="form-control me-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
@@ -44,59 +48,71 @@
                             </div>
 
                             <div class="modal-body p-4 pt-0">
-                                <form>
-                                    <div class="form-floating mb-3">
-                                        <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="nombre@ejemplo.com">
-                                        <label for="floatingInput">Correo electrónico</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Contraseña">
-                                        <label for="floatingPassword">Contraseña</label>
-                                    </div>
-                                    <button class="w-100 mb-2 btn btn-lg rounded-4 btn-outline-success" type="submit">Iniciar sesión</button>
-                                    <small class="text-muted d-block">Al iniciar sesión aceptas los términos de uso.</small>
+                                <form id="form_sesion">
+                                    <div id ="campos-sesion">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control rounded-4" id="floatingNombre" name="nombre" placeholder="Nombre de usuario" autocomplete="username" required>
+                                            <label for="floatingNombre">Nombre de usuario</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control rounded-4" id="floatingCorreo" name="correo" placeholder="Correo electronico" autocomplete="email" required>
+                                            <label for="floatingCorreo">Correo electrónico</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control rounded-4" id="floatingPassword" name="contrasena" placeholder="Contraseña" autocomplete="current-password" required>
+                                            <label for="floatingPassword">Contraseña</label>
+                                        </div>
+                                        <button class="w-100 mb-2 btn btn-lg rounded-4 btn-outline-success" type="submit" id="boton_sesion">Iniciar sesión</button>
+                                        <small class="text-muted d-block">Al iniciar sesión aceptas los términos de uso.</small>
+                                        <hr class="my-4">
 
-                                    <hr class="my-4">
+                                        <h2 class="fs-5 fw-bold mb-3 text-center">O</h2>
 
-                                    <h2 class="fs-5 fw-bold mb-3 text-center">O</h2>
-
-                                    <div class="accordion container-sm" id="accordionExample">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                    Mas formas de iniciar sesion
-                                                </button>
-                                            </h2>
-
-                                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="button">
-                                                        <img src="../imagenes-zelda/X_logo_2023.svg.webp" alt="logo-fb" width="20" height="20" class="me-2">
-                                                        Iniciar sesión con X
+                                        <div class="accordion container-sm" id="accordionExample">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                        Mas formas de iniciar sesion
                                                     </button>
-                                                    <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="button">
-                                                        <img src="../imagenes-zelda/2023_Facebook_icon.svg.webp" alt="logo-fb" width="20" height="20" class="me-2">
-                                                        Iniciar sesión con Facebook
-                                                    </button>
-                                                    <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="button">
-                                                        <img src="../imagenes-zelda/GitHub_Invertocat_Black.png" alt="logo-fb" width="20" height="20" class="me-2">
-                                                        Iniciar sesión con GitHub
-                                                    </button>
+                                                </h2>
+
+                                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="button">
+                                                            <img src="../imagenes-zelda/X_logo_2023.svg.webp" alt="logo-fb" width="20" height="20" class="me-2">
+                                                                Iniciar sesión con X
+                                                        </button>
+                                                        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="button">
+                                                            <img src="../imagenes-zelda/2023_Facebook_icon.svg.webp" alt="logo-fb" width="20" height="20" class="me-2">
+                                                                Iniciar sesión con Facebook
+                                                        </button>
+                                                        <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="button">
+                                                            <img src="../imagenes-zelda/GitHub_Invertocat_Black.png" alt="logo-fb" width="20" height="20" class="me-2">
+                                                                Iniciar sesión con GitHub
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    
+                                    <div class="mensaje-bienvenida d-flex flex-column my-2 my-lg-0 text-center d-none" id="mensajeBienvenida" aria-live="polite">
+                                        <h1 class="text-success mb-1" id="textoBienvenida"></h1>
+                                        <h3 class="text-success mb-1" id="correoBienvenida"></h2>
+                                        <p class="text-success mb-0">¡Sesión iniciada correctamente!</p>
+                                    </div>
                                 </form>
+                                
                                 <hr class="my-4">
+
                                 <div class="modal-footer border-top-0 pt-0 justify-content-center">
                                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-outline-success">Guardar cambios</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-             </div>
+            </div>
         </nav>
     </header>
 

@@ -7,7 +7,6 @@ if (botonVolver) {const controlarBotonVolver = () => {
     }
 
     window.addEventListener("scroll", controlarBotonVolver);
-    controlarBotonVolver();
 
     botonVolver.addEventListener("click",() => {
         window.scrollTo({
@@ -114,3 +113,30 @@ if (formularioContacto && telefonoContacto) {
         }
     });
 }
+
+const formularioSesion = document.querySelector("#form_sesion");
+const nombreUsuario = document.querySelector("#Nombre_usuario");
+
+if (formularioSesion) {
+    const nombreSesion = formularioSesion.querySelector("#floatingNombre");
+    const camposSesion = formularioSesion.querySelector("#campos-sesion");
+    const mensajeBienvenida = formularioSesion.querySelector("#mensajeBienvenida");
+    const textoBienvenida = document.querySelector("#textoBienvenida");
+    const correoSesion = formularioSesion.querySelector("#floatingCorreo");
+    const correoBienvenida = document.querySelector("#correoBienvenida");
+
+    if (nombreSesion instanceof HTMLInputElement && camposSesion instanceof HTMLElement && 
+        mensajeBienvenida instanceof HTMLElement && textoBienvenida instanceof HTMLElement && 
+        correoSesion instanceof HTMLElement && correoBienvenida instanceof HTMLElement && nombreUsuario) {
+        formularioSesion.addEventListener("submit", (evento) => {
+            evento.preventDefault();
+            textoBienvenida.textContent = `¡Bienvenido, ${nombreSesion.value.trim()}!`;
+            correoBienvenida.textContent = `${correoSesion.value.trim()}`
+            camposSesion.classList.add("d-none");
+            mensajeBienvenida.classList.remove("d-none");
+            nombreUsuario.textContent = `Sesion iniciada: ${nombreSesion.value.trim()}`;
+        });
+    }
+}
+
+

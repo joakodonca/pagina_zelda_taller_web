@@ -178,3 +178,10 @@ img {
     transform: translateY(0);
     pointer-events: auto;
 }
+
+.accordion-body .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
