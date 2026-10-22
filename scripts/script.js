@@ -92,24 +92,24 @@ if(textTarea && contador_texto){
     });
 }
 
-const formularioContacto = document.querySelector("#form-contacto-bootstrap");
-const telefonoContacto = document.querySelector("#telefono-contacto");
+const formularioNosotros = document.querySelector("#form-nosotros-bootstrap");
+const telefonoNosotros = document.querySelector("#telefono-nosotros");
 
-if (formularioContacto && telefonoContacto) {
+if (formularioNosotros && telefonoNosotros) {
     const validarTelefono = () => {
-        const cantidadCaracteres = telefonoContacto.value.replace(/\s/g, "").length;
-        telefonoContacto.setCustomValidity(
+        const cantidadCaracteres = telefonoNosotros.value.replace(/\s/g, "").length;
+        telefonoNosotros.setCustomValidity(
             cantidadCaracteres === 12 ? "" : "El teléfono debe tener exactamente 12 caracteres, sin contar los espacios."
         );
     };
 
-    telefonoContacto.addEventListener("input", validarTelefono);
-    formularioContacto.addEventListener("submit", (evento) => {
+    telefonoNosotros.addEventListener("input", validarTelefono);
+    formularioNosotros.addEventListener("submit", (evento) => {
         validarTelefono();
 
-        if (!telefonoContacto.checkValidity()) {
+        if (!telefonoNosotros.checkValidity()) {
             evento.preventDefault();
-            telefonoContacto.reportValidity();
+            telefonoNosotros.reportValidity();
         }
     });
 }
@@ -139,4 +139,80 @@ if (formularioSesion) {
     }
 }
 
+const formularioContactoBootstrap = document.getElementById('form-contacto-bootstrap');
 
+if (formularioContactoBootstrap) formularioContactoBootstrap.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const errorElements = document.querySelectorAll('.error-message');
+    errorElements.forEach(el => el.style.display = 'none');
+
+    // Get form values
+    const name = document.querySelector("#nombreContacto").value.trim();
+    const lastName = document.querySelector("#apellidoContacto").value.trim();
+    const email = document.getElementById('Email').value.trim();
+    const phone = document.getElementById('telefono-contacto').value.trim();
+    const message = document.getElementById('exampleFormControlTextarea1').value.trim();
+    const asunto = document.getElementById('exampleDataList').value.trim();
+    const fecha = document.getElementById('fecha-nacimiento').value.trim();
+
+    // Validation flags
+    let isValid = true;
+
+    // Name validation
+    if (name === '' || lastName === '') {
+        document.getElementById('nameError').textContent = 'Nombre y apellido son obligatorios.';
+        document.getElementById('nameError').style.display = 'block';
+        isValid = false;
+    }
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === '' || !emailPattern.test(email)) {
+        document.getElementById('emailError').textContent = 'Email correcto es obligatorio.';
+        document.getElementById('emailError').style.display = 'block';
+        isValid = false;
+    }
+
+    // Phone validation
+    const phonePattern = /^\+56\s?9\s?\d{4}\s?\d{4}$/;
+    if (phone === '' || !phonePattern.test(phone)) {
+        document.getElementById('phoneError').textContent = 'Ingrese un numero de telefono valido.';
+        document.getElementById('phoneError').style.display = 'block';
+        isValid = false;
+    }
+
+    // Message validation
+    if (message === '') {
+        document.getElementById('messageError').textContent = 'Envie un mensaje.';
+        document.getElementById('messageError').style.display = 'block';
+        isValid = false;
+    }
+
+    if (asunto === '') {
+        document.getElementById('asuntoError').textContent = 'Seleccione el asunto.';
+        document.getElementById('asuntoError').style.display = 'block';
+        isValid = false;
+    }
+
+    if (fecha === '') {
+        document.getElementById('fechaError').textContent = 'Ingrese su fecha de nacimiento.';
+        document.getElementById('fechaError').style.display = 'block';
+        isValid = false;
+    }
+
+    // If form is valid, you can submit it or perform any other action
+    if (isValid) {
+        const progresoEnvio = document.getElementById('progreso-envio');
+        const barraProgresoEnvio = document.getElementById('barra-progreso-envio');
+
+        if (progresoEnvio && barraProgresoEnvio) {
+            progresoEnvio.classList.remove('d-none');
+            requestAnimationFrame(() => {
+                barraProgresoEnvio.style.width = '100%';
+                barraProgresoEnvio.setAttribute('aria-valuenow', '100');
+            });
+            window.setTimeout(() => window.location.reload(), 900);
+        }
+    }
+});

@@ -185,3 +185,6 @@ img {
     justify-content: center;
 }
 
+.error-message {
+    display: none; /* Hidden by default */
+}
