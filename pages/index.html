@@ -99,7 +99,7 @@
                                     
                                     <div class="mensaje-bienvenida d-flex flex-column my-2 my-lg-0 text-center d-none" id="mensajeBienvenida" aria-live="polite">
                                         <h1 class="text-success mb-1" id="textoBienvenida"></h1>
-                                        <h3 class="text-success mb-1" id="correoBienvenida"></h2>
+                                        <h3 class="text-success mb-1" id="correoBienvenida"></h3>
                                         <p class="text-success mb-0">¡Sesión iniciada correctamente!</p>
                                     </div>
                                 </form>
@@ -229,7 +229,7 @@
             <div class="col-12 col-md-6">
                 <div class="card h-100" id="card-index2">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center text-center shadow-lg">
-                        <h1 class="card-title">Disfruta del trailer en Youtube</p>
+                        <h1 class="card-title">Disfruta del trailer en Youtube</h1>
                         <button onclick="window.open('https://www.youtube.com/watch?v=ofH5ptn5w-A', '_blank')" class="btn btn-danger">Ver en YouTube</button>
                     </div>
                 </div>
@@ -237,8 +237,12 @@
         </div>
     </section>
 
-    <section id="monstruos-destacados" class="aparecer-scroll container-xl my-5">
-        <h2 class="text-center mb-4">Monstruos destacados</h2>
+    <section id="monstruos-destacados" class="aparecer-scroll container-xl my-5" aria-busy="true">
+        <h1 class="fw-bold text-center fst-italic m-5">Enemigos destacados</h1>
+        <div id="monstruos-cargando" class="d-flex justify-content-center align-items-center gap-2 my-3" role="status">
+            <span class="spinner-border text-light" aria-hidden="true"></span>
+            <span class="text-white">Cargando monstruos...</span>
+        </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5 g-3">
             <div class="col cont-cards"></div>
             <div class="col cont-cards"></div>

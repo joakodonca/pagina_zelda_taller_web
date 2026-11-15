@@ -171,6 +171,7 @@ img {
     transform: translateY(20px);
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    overflow-y: auto;
 }
 
 .carta-oculta.visible {

@@ -1,6 +1,6 @@
 const API_URL =
   "https://api.hyrule-compendium.com/v3/compendium/category/monsters";
-  
+
 const nombresDestacados = [
   "lynel",
   "hinox",
@@ -14,6 +14,9 @@ async function cargarMonstruos() {
   if (!respuesta.ok) throw new Error(`Error HTTP: ${respuesta.status}`);
 
   const datos = await respuesta.json();
+  if (!datos || !Array.isArray(datos.data) || datos.data.length === 0) {
+    throw new Error("La API no devolvió monstruos.");
+  }
   const monstruosDestacados = nombresDestacados.map((nombre) => {
     const monstruo = datos.data.find(
       (entrada) => entrada.name.toLowerCase() === nombre,
@@ -30,7 +33,9 @@ async function cargarMonstruos() {
   const tarjetas = seccion?.querySelectorAll(".cont-cards");
 
   if (!seccion || !tarjetas || tarjetas.length !== monstruosDestacados.length) {
-    throw new Error("No se encontró el contenedor para las cards de monstruos.");
+    throw new Error(
+      "No se encontró el contenedor para las cards de monstruos.",
+    );
   }
 
   monstruosDestacados.forEach((monstruo, indice) => {
@@ -38,7 +43,7 @@ async function cargarMonstruos() {
     tarjeta.className = "card h-100 shadow-sm";
 
     const imagen = document.createElement("img");
-    imagen.className = "card-img-top";
+    imagen.className = "img-thumbnail card-img-top";
     imagen.src = monstruo.image;
     imagen.alt = `Imagen de ${monstruo.name}`;
     imagen.loading = "lazy";
@@ -52,9 +57,19 @@ async function cargarMonstruos() {
     titulo.textContent = monstruo.name;
     cuerpo.append(titulo);
 
+    const botin = document.createElement("p");
+    botin.className = "card-text";
+    const etiquetaBotin = document.createElement("strong");
+    etiquetaBotin.textContent = "Drop: ";
+    botin.append(
+      etiquetaBotin,
+      document.createTextNode(monstruo.drops?.join(", ") || "Sin información"),
+    );
+    cuerpo.append(botin);
+
     if (monstruo.common_locations?.length) {
       const ubicaciones = document.createElement("p");
-      ubicaciones.className = "card-text";
+      ubicaciones.className = "card-text my-0";
 
       const etiquetaUbicaciones = document.createElement("strong");
       etiquetaUbicaciones.textContent = "Ubicación: ";
@@ -72,12 +87,12 @@ async function cargarMonstruos() {
 
     const cuerpoOculto = document.createElement("div");
     cuerpoOculto.className = "card-body";
-    
+
     const tituloOculto = document.createElement("h3");
     tituloOculto.className = "card-title h5 text-capitalize";
     tituloOculto.textContent = monstruo.name;
     cuerpoOculto.append(tituloOculto);
-    
+
     const descripcion = document.createElement("p");
     descripcion.className = "card-text";
     descripcion.textContent = monstruo.description;
@@ -94,18 +109,24 @@ async function cargarMonstruos() {
       cartaOculta.classList.remove("visible");
     });
   });
+
+  seccion.setAttribute("aria-busy", "false");
+  seccion.querySelector("#monstruos-cargando")?.remove();
 }
 
-cargarMonstruos().catch((error) => {
-  console.error("No se pudieron cargar los monstruos:", error);
-  const seccion = document.querySelector("#monstruos-destacados");
+window.onload = () =>
+  cargarMonstruos().catch((error) => {
+    console.error("No se pudieron cargar los monstruos:", error);
+    const seccion = document.querySelector("#monstruos-destacados");
 
-  if (seccion) {
-    const mensaje = document.createElement("p");
-    mensaje.className = "alert alert-danger";
-    mensaje.setAttribute("role", "alert");
-    mensaje.textContent =
-      "No se pudieron cargar los monstruos. Intenta actualizar la página.";
-    seccion.append(mensaje);
-  }
-});
+    if (seccion) {
+      seccion.setAttribute("aria-busy", "false");
+      seccion.querySelector("#monstruos-cargando")?.remove();
+      const mensaje = document.createElement("p");
+      mensaje.className = "alert alert-danger";
+      mensaje.setAttribute("role", "alert");
+      mensaje.textContent =
+        "No se pudieron cargar los monstruos. Intenta actualizar la página.";
+      seccion.append(mensaje);
+    }
+  });
