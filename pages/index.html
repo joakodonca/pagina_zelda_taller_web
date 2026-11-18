@@ -237,19 +237,48 @@
         </div>
     </section>
 
-    <section id="monstruos-destacados" class="aparecer-scroll container-xl my-5" aria-busy="true">
+    <section id="monstruos-destacados" class="aparecer-scroll container-xl my-5" aria-busy="false">
         <h1 class="fw-bold text-center fst-italic m-5">Enemigos destacados</h1>
-        <div id="monstruos-cargando" class="d-flex justify-content-center align-items-center gap-2 my-3" role="status">
+        <select id="selector-monstruo" class="form-select" aria-label="Elige un tipo de monstruo">
+            <option value="" selected disabled>Selecciona un monstruo</option>
+            <option value="bokoblin">Bokoblin</option>
+            <option value="calamity ganon">Calamity Ganon</option>
+            <option value="chuchu">Chuchu (slime)</option>
+            <option value="dark beast ganon">Dark Beast Ganon</option>
+            <option value="dinraal">Dinraal</option>
+            <option value="farosh">Farosh</option>
+            <option value="fireblight ganon">Fireblight Ganon</option>
+            <option value="guardian">Guardian</option>
+            <option value="guardian scout">Guardian Scout</option>
+            <option value="guardian skywatcher">Guardian Skywatcher</option>
+            <option value="guardian stalker">Guardian Stalker</option>
+            <option value="guardian turret">Guardian Turret</option>
+            <option value="hinox">Hinox</option>
+            <option value="keese">Keese</option>
+            <option value="lizalfos">Lizalfos</option>
+            <option value="lynel">Lynel</option>
+            <option value="master kohga">Master Kohga</option>
+            <option value="moblin">Moblin</option>
+            <option value="molduga">Molduga</option>
+            <option value="monk maz koshia">Monk Maz Koshia</option>
+            <option value="naydra">Naydra</option>
+            <option value="octorok">Octorok</option>
+            <option value="pebblit">Pebblit</option>
+            <option value="sentry">Sentry</option>
+            <option value="talus">Talus</option>
+            <option value="thunderblight ganon">Thunderblight Ganon</option>
+            <option value="waterblight ganon">Waterblight Ganon</option>
+            <option value="windblight ganon">Windblight Ganon</option>
+            <option value="wizzrobe">Wizzrobe</option>
+            <option value="yiga blademaster">Yiga Blademaster</option>
+            <option value="yiga footsoldier">Yiga Footsoldier</option>
+        </select>
+        <div id="monstruos-cargando" class="d-none d-flex justify-content-center align-items-center gap-2 my-3" role="status">
             <span class="spinner-border text-light" aria-hidden="true"></span>
             <span class="text-white">Cargando monstruos...</span>
         </div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5 g-3">
-            <div class="col cont-cards"></div>
-            <div class="col cont-cards"></div>
-            <div class="col cont-cards"></div>
-            <div class="col cont-cards"></div>
-            <div class="col cont-cards"></div>
-        </div>
+        <p id="monstruos-resultado" class="text-white mt-3" aria-live="polite">Elige un tipo de monstruo para ver sus variantes.</p>
+        <div id="monstruos-cartas" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5 g-3"></div>
     </section>
 
     <aside class="aparecer-scroll container-xl my5">
